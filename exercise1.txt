@@ -1,0 +1,58 @@
+a)
+1)
+(define (problem lamps)
+(:domain turn-on-lamps)
+(:objects 
+	lamp1
+    lamp2
+)
+(:init
+    (lamp lamp1)
+    (lamp lamp2)
+)
+(:goal
+(and 
+    (turned-on lamp1)
+    (turned-on lamp2)
+)))
+(define (domain turn-on-lamps)
+(:predicates (turned-on ?x))
+	
+(:action switch
+:parameters (?lamp1 ?lamp2)
+:precondition (and (lamp ?lamp1) (lamp ?lamp2))
+:effect (and (when (turned-on ?lamp1) (not (turned-on ?lamp1)))
+            (when (not (turned-on ?lamp1)) (turned-on ?lamp1))   
+            (when (turned-on ?lamp2) (not (turned-on ?lamp2)))
+            (when (not (turned-on ?lamp2)) (turned-on ?lamp2))          
+))
+)
+
+2)
+(define (problem lamps)
+(:domain turn-on-lamps)
+(:objects 
+	lamp1
+    lamp2
+)
+(:init
+    (lamp lamp1)
+    (lamp lamp2)
+    (turned-on lamp1)
+    (turned-on lamp2)
+)
+(:goal
+(and 
+    not (turned-on lamp1)
+    not (turned-on lamp2)
+)))
+(define (domain turn-on-lamps)
+(:predicates (turned-on ?x))
+	
+(:action switch
+:parameters (?l)
+:precondition (and (lamp ?l))
+:effect (and (when (turned-on ?l) (not (turned-on ?l)))
+            (when (not (turned-on ?l)) (turned-on ?l))  
+))
+)

@@ -30,10 +30,12 @@ G = {a -> T, b -> T, c -> T, d -> T}
 
 4)
 
-Problema = (V,I,{o1,o2,o3},G)
+Problema i = (V,I,{o1,o2,..,oi},G)
 V = {a,b,c,d}
-I = {a -> F, b -> F, c -> F, d -> F}
-o1 = (T, a/\(a>b))
-o2 = (b, c)
-o3 = (b, d)
-G = {a -> T, b -> T}
+I = {x1 -> T, x2 -> T, ..., xi -> F}
+o1 = (T, x1)
+o2 = (T, x2 /\ ~x1)
+...
+oi-1 = (T, xi-1/\~xi-2)
+oi = (T, xi /\ ~xi-1)
+G = {x1 -> T, x2 -> T, ..., xi -> T}

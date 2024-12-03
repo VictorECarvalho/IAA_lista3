@@ -1,58 +1,39 @@
 a)
 1)
-(define (problem lamps)
-(:domain turn-on-lamps)
-(:objects 
-	lamp1
-    lamp2
-)
-(:init
-    (lamp lamp1)
-    (lamp lamp2)
-)
-(:goal
-(and 
-    (turned-on lamp1)
-    (turned-on lamp2)
-)))
-(define (domain turn-on-lamps)
-(:predicates (turned-on ?x))
-	
-(:action switch
-:parameters (?lamp1 ?lamp2)
-:precondition (and (lamp ?lamp1) (lamp ?lamp2))
-:effect (and (when (turned-on ?lamp1) (not (turned-on ?lamp1)))
-            (when (not (turned-on ?lamp1)) (turned-on ?lamp1))   
-            (when (turned-on ?lamp2) (not (turned-on ?lamp2)))
-            (when (not (turned-on ?lamp2)) (turned-on ?lamp2))          
-))
-)
+
+Problema = (V,I,{o1,o2},G)
+V = {a,b}
+I = {a -> F, b -> F}
+o1 = (T, a/\~b)
+o2 = (T, ~a/\b)
+G = {a -> T, b -> T}
+
 
 2)
-(define (problem lamps)
-(:domain turn-on-lamps)
-(:objects 
-	lamp1
-    lamp2
-)
-(:init
-    (lamp lamp1)
-    (lamp lamp2)
-    (turned-on lamp1)
-    (turned-on lamp2)
-)
-(:goal
-(and 
-    not (turned-on lamp1)
-    not (turned-on lamp2)
-)))
-(define (domain turn-on-lamps)
-(:predicates (turned-on ?x))
-	
-(:action switch
-:parameters (?l)
-:precondition (and (lamp ?l))
-:effect (and (when (turned-on ?l) (not (turned-on ?l)))
-            (when (not (turned-on ?l)) (turned-on ?l))  
-))
-)
+
+Problema = (V,I,{o1,o2},G)
+V = {a,b}
+I = {a -> T, b -> T}
+o1 = (T, ~a/\~b)
+o2 = (T, a/\b)
+G = {a -> F, b -> F}
+
+3)
+
+Problema = (V,I,{o1,o2,o3},G)
+V = {a,b,c,d}
+I = {a -> F, b -> F, c -> F, d -> F}
+o1 = (T, a/\(b>c))
+o2 = (a, b)
+o3 = (b, d)
+G = {a -> T, b -> T, c -> T, d -> T}
+
+4)
+
+Problema = (V,I,{o1,o2,o3},G)
+V = {a,b,c,d}
+I = {a -> F, b -> F, c -> F, d -> F}
+o1 = (T, a/\(a>b))
+o2 = (b, c)
+o3 = (b, d)
+G = {a -> T, b -> T}

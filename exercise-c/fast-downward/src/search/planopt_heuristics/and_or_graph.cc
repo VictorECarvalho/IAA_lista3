@@ -41,38 +41,40 @@ const AndOrGraphNode &AndOrGraph::get_node(NodeID id) const {
 }
 
 void AndOrGraph::most_conservative_valuation() {
-    /*
-      General approach for computing the most conservative valuation:
-
-      For each node n keep track of the number of successors of n that are
-      forced true in the member num_forced_successors.
-
-      Use a queue of nodes that are forced true because they have the correct
-      number of forced true successors.
-
-      While there are nodes in the queue, remove one of them and increase the
-      number of forced successors of all its predecessors by one. When this
-      change means that a node is now forced true, add it to the queue.
-      Take care to “expand” each node at most once.
-
-      When the queue is empty the flag forced_true of a node should be set to
-      true if and only if the node is forced true.
-    */
 
     deque<NodeID> queue;
 
     for (AndOrGraphNode &node : nodes) {
         node.forced_true = false;
         node.num_forced_successors = 0;
+
         if (node.type == NodeType::AND && node.successor_ids.empty()) {
             queue.push_back(node.id);
         }
     }
 
-    /*
-      TODO: add your code for exercise 2 (a) here. Ignore the members
-      direct_cost, additive_cost, and achiever for now.
-    */
+    while (!queue.empty()) {
+        NodeID current_id = queue.front();
+        queue.pop_front();
+
+        AndOrGraphNode &current_node = nodes[current_id];
+        if (current_node.forced_true) {
+            continue; 
+        }
+        current_node.forced_true = true;
+
+        for (NodeID predecessor_id : current_node.predecessor_ids) {
+            AndOrGraphNode &predecessor_node = nodes[predecessor_id];
+
+            predecessor_node.num_forced_successors++;
+
+            if (predecessor_node.type == NodeType::AND && predecessor_node.num_forced_successors == predecessor_node.successor_ids.size()) {
+                queue.push_back(predecessor_id);
+            } else if (predecessor_node.type == NodeType::OR && predecessor_node.num_forced_successors > 0) {
+                queue.push_back(predecessor_id);
+            }
+        }
+    }
 }
 
 void AndOrGraph::weighted_most_conservative_valuation() {

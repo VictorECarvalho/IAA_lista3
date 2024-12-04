@@ -1,0 +1,135 @@
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.003s wall-clock]
+Generated 20 rules.
+Computing model... [0.040s CPU, 0.034s wall-clock]
+5723 relevant atoms
+1914 auxiliary atoms
+7637 final queue length
+16307 total queue pushes
+Completing instantiation... [0.100s CPU, 0.104s wall-clock]
+Instantiating: [0.140s CPU, 0.143s wall-clock]
+Computing fact groups...
+Finding invariants...
+7 initial candidates
+Finding invariants: [0.010s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.003s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+40 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.008s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.011s wall-clock]
+Translating task: [0.140s CPU, 0.135s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+54 propositions removed
+Detecting unreachable propositions: [0.040s CPU, 0.046s wall-clock]
+Reordering and filtering variables...
+82 of 82 variables necessary.
+36 of 82 mutex groups necessary.
+3973 of 3973 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.020s CPU, 0.019s wall-clock]
+Translator variables: 82
+Translator derived variables: 0
+Translator facts: 525
+Translator goal facts: 36
+Translator mutex groups: 36
+Translator total mutex groups size: 407
+Translator operators: 3973
+Translator axioms: 0
+Translator task size: 30936
+Translator peak memory: 52188 KB
+Writing output... [0.020s CPU, 0.022s wall-clock]
+Done! [0.380s CPU, 0.387s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/filipe/Desktop/IAA_lista3-main/exercise-c/fast-downward/builds/release/bin/downward --heuristic 'h=planopt_add()' --search 'astar(lmcut())' --internal-plan-file sas_plan < output.sas
+reading input... [t=0s]
+done reading input! [t=0.00897595s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.0169766s]
+peak memory difference for successor generator creation: 972 KB
+time for successor generation creation: 0.00199989s
+Variables: 82
+FactPairs: 525
+Bytes per state: 24
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 31
+[g=0, 1 evaluated, 0 expanded, t=0.0189763s, 16344 KB]
+f = 31 [1 evaluated, 0 expanded, t=0.0189763s, 16344 KB]
+Initial heuristic value for lmcut: 31
+pruning method: none
+f = 32 [6 evaluated, 1 expanded, t=0.026956s, 16344 KB]
+f = 33 [8 evaluated, 2 expanded, t=0.0309559s, 16344 KB]
+f = 34 [18 evaluated, 5 expanded, t=0.0439573s, 16344 KB]
+New best heuristic value for lmcut: 30
+[g=4, 21 evaluated, 6 expanded, t=0.0499557s, 16344 KB]
+f = 35 [30 evaluated, 12 expanded, t=0.0569551s, 16344 KB]
+New best heuristic value for lmcut: 29
+[g=6, 33 evaluated, 15 expanded, t=0.060955s, 16344 KB]
+f = 36 [38 evaluated, 21 expanded, t=0.0679571s, 16344 KB]
+New best heuristic value for lmcut: 25
+[g=8, 39 evaluated, 22 expanded, t=0.0689552s, 16344 KB]
+f = 37 [97 evaluated, 39 expanded, t=0.154953s, 16344 KB]
+f = 38 [237 evaluated, 84 expanded, t=0.35994s, 16344 KB]
+f = 39 [441 evaluated, 168 expanded, 6 reopened, t=0.641933s, 16344 KB]
+f = 40 [792 evaluated, 318 expanded, 10 reopened, t=1.12392s, 16344 KB]
+New best heuristic value for lmcut: 24
+[g=16, 799 evaluated, 320 expanded, 10 reopened, t=1.13092s, 16344 KB]
+f = 41 [1343 evaluated, 585 expanded, 15 reopened, t=1.87989s, 16344 KB]
+f = 42 [2108 evaluated, 994 expanded, 25 reopened, t=2.85884s, 16344 KB]
+New best heuristic value for lmcut: 23
+[g=16, 2387 evaluated, 1130 expanded, 26 reopened, t=3.17683s, 16344 KB]
+f = 43 [3241 evaluated, 1683 expanded, 48 reopened, t=4.31878s, 16344 KB]
+New best heuristic value for lmcut: 22
+[g=19, 3291 evaluated, 1707 expanded, 48 reopened, t=4.37477s, 16344 KB]
+New best heuristic value for lmcut: 21
+[g=21, 3490 evaluated, 1823 expanded, 48 reopened, t=4.60275s, 16344 KB]
+f = 44 [4558 evaluated, 2591 expanded, 79 reopened, t=6.07064s, 16344 KB]
+f = 45 [6109 evaluated, 3718 expanded, 114 reopened, t=8.07354s, 16344 KB]
+f = 46 [8094 evaluated, 5023 expanded, 134 reopened, t=10.5944s, 16344 KB]
+New best heuristic value for lmcut: 19
+[g=25, 8653 evaluated, 5274 expanded, 135 reopened, t=11.1913s, 16344 KB]
+New best heuristic value for lmcut: 18
+[g=27, 8667 evaluated, 5276 expanded, 135 reopened, t=11.2063s, 16344 KB]
+f = 47 [10702 evaluated, 6814 expanded, 188 reopened, t=13.7741s, 16344 KB]
+New best heuristic value for lmcut: 17
+[g=28, 10724 evaluated, 6819 expanded, 188 reopened, t=13.7971s, 16344 KB]
+f = 48 [15298 evaluated, 9514 expanded, 273 reopened, t=19.2527s, 16344 KB]
+f = 49 [21751 evaluated, 13367 expanded, 382 reopened, t=26.8711s, 16344 KB]
+f = 50 [32708 evaluated, 19634 expanded, 688 reopened, t=39.8494s, 16344 KB]
+New best heuristic value for lmcut: 16
+[g=29, 44900 evaluated, 25743 expanded, 962 reopened, t=53.3043s, 16344 KB]
+Remove intermediate file output.sas
+Traceback (most recent call last):
+  File "./fast-downward/fast-downward.py", line 6, in <module>
+    main()
+  File "/home/filipe/Desktop/IAA_lista3-main/exercise-c/fast-downward/driver/main.py", line 42, in main
+    os.remove(args.sas_file)
+FileNotFoundError: [Errno 2] No such file or directory: 'output.sas'
+

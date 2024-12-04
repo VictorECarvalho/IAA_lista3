@@ -1,0 +1,114 @@
+Parsing...
+Parsing: [0.000s CPU, 0.004s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.010s CPU, 0.005s wall-clock]
+Generated 20 rules.
+Computing model... [0.050s CPU, 0.050s wall-clock]
+8247 relevant atoms
+2514 auxiliary atoms
+10761 final queue length
+23517 total queue pushes
+Completing instantiation... [0.130s CPU, 0.138s wall-clock]
+Instantiating: [0.190s CPU, 0.197s wall-clock]
+Computing fact groups...
+Finding invariants...
+7 initial candidates
+Finding invariants: [0.000s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+648 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.010s CPU, 0.001s wall-clock]
+Computing fact groups: [0.020s CPU, 0.005s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.014s wall-clock]
+Translating task: [0.190s CPU, 0.202s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+9 operators removed
+0 axioms removed
+118 propositions removed
+Detecting unreachable propositions: [0.080s CPU, 0.076s wall-clock]
+Reordering and filtering variables...
+589 of 589 variables necessary.
+0 of 0 mutex groups necessary.
+5923 of 5923 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.050s CPU, 0.056s wall-clock]
+Translator variables: 589
+Translator derived variables: 0
+Translator facts: 1178
+Translator goal facts: 44
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 5923
+Translator axioms: 0
+Translator task size: 43812
+Translator peak memory: 60544 KB
+Writing output... [0.050s CPU, 0.038s wall-clock]
+Done! [0.590s CPU, 0.590s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/filipe/Desktop/IAA_lista3-main/exercise-c/fast-downward/builds/release/bin/downward --heuristic 'h=planopt_add()' --search 'astar(lmcut())' --internal-plan-file sas_plan < output.sas
+reading input... [t=0s]
+done reading input! [t=0.015999s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.0259994s]
+peak memory difference for successor generator creation: 1288 KB
+time for successor generation creation: 0.00200056s
+Variables: 589
+FactPairs: 1178
+Bytes per state: 76
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 39
+[g=0, 1 evaluated, 0 expanded, t=0.0309996s, 19828 KB]
+f = 39 [1 evaluated, 0 expanded, t=0.0309996s, 19828 KB]
+Initial heuristic value for lmcut: 39
+pruning method: none
+f = 40 [5 evaluated, 1 expanded, t=0.0439991s, 19828 KB]
+New best heuristic value for lmcut: 38
+[g=2, 10 evaluated, 3 expanded, t=0.0629988s, 19828 KB]
+New best heuristic value for lmcut: 37
+[g=3, 13 evaluated, 4 expanded, t=0.0719988s, 19828 KB]
+New best heuristic value for lmcut: 33
+[g=4, 17 evaluated, 5 expanded, t=0.0839986s, 19828 KB]
+f = 41 [243 evaluated, 54 expanded, t=0.724984s, 19828 KB]
+New best heuristic value for lmcut: 32
+[g=8, 452 evaluated, 102 expanded, t=1.32997s, 19828 KB]
+New best heuristic value for lmcut: 31
+[g=9, 463 evaluated, 103 expanded, t=1.35897s, 19828 KB]
+New best heuristic value for lmcut: 30
+[g=10, 481 evaluated, 104 expanded, t=1.40297s, 19828 KB]
+New best heuristic value for lmcut: 29
+[g=10, 483 evaluated, 104 expanded, t=1.40797s, 19828 KB]
+New best heuristic value for lmcut: 28
+[g=13, 2291 evaluated, 209 expanded, t=5.92434s, 19828 KB]
+f = 42 [6816 evaluated, 628 expanded, t=17.7734s, 19828 KB]
+New best heuristic value for lmcut: 25
+[g=15, 13054 evaluated, 966 expanded, t=33.6217s, 19828 KB]
+New best heuristic value for lmcut: 24
+[g=17, 13277 evaluated, 973 expanded, t=34.1047s, 19828 KB]
+Remove intermediate file output.sas
+search exit code: -9
+
+Driver aborting after search
+

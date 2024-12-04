@@ -1,0 +1,345 @@
+Parsing...
+Parsing: [0.000s CPU, 0.021s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.005s wall-clock]
+Generated 20 rules.
+Computing model... [0.050s CPU, 0.047s wall-clock]
+8247 relevant atoms
+2514 auxiliary atoms
+10761 final queue length
+23517 total queue pushes
+Completing instantiation... [0.160s CPU, 0.161s wall-clock]
+Instantiating: [0.210s CPU, 0.215s wall-clock]
+Computing fact groups...
+Finding invariants...
+7 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.010s CPU, 0.004s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+48 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.010s CPU, 0.010s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.020s CPU, 0.016s wall-clock]
+Translating task: [0.220s CPU, 0.205s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+63 propositions removed
+Detecting unreachable propositions: [0.110s CPU, 0.115s wall-clock]
+Reordering and filtering variables...
+99 of 99 variables necessary.
+44 of 99 mutex groups necessary.
+5888 of 5888 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.020s CPU, 0.027s wall-clock]
+Translator variables: 99
+Translator derived variables: 0
+Translator facts: 688
+Translator goal facts: 44
+Translator mutex groups: 44
+Translator total mutex groups size: 545
+Translator operators: 5888
+Translator axioms: 0
+Translator task size: 45426
+Translator peak memory: 62832 KB
+Writing output... [0.030s CPU, 0.033s wall-clock]
+Done! [0.620s CPU, 0.643s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/filipe/Desktop/IAA_lista3-main/exercise-c/fast-downward/builds/release/bin/downward --heuristic 'h=planopt_add()' --search 'astar(h)' --internal-plan-file sas_plan < output.sas
+reading input... [t=2.6209e-05s]
+done reading input! [t=0.0140094s]
+Building successor generator...done! [t=0.0219941s]
+peak memory difference for successor generator creation: 236 KB
+time for successor generation creation: 0.00230716s
+Variables: 99
+FactPairs: 688
+Bytes per state: 28
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for planopt_add: 3348
+[g=0, 1 evaluated, 0 expanded, t=0.0248976s, 18404 KB]
+f = 3348 [1 evaluated, 0 expanded, t=0.0249255s, 18404 KB]
+Initial heuristic value for planopt_add: 3348
+pruning method: none
+New best heuristic value for planopt_add: 3226
+[g=1, 2 evaluated, 1 expanded, t=0.0271098s, 18404 KB]
+New best heuristic value for planopt_add: 3178
+[g=1, 3 evaluated, 1 expanded, t=0.029218s, 18404 KB]
+f = 4245 [11 evaluated, 3 expanded, t=0.041539s, 18404 KB]
+f = 4430 [13 evaluated, 4 expanded, t=0.043597s, 18404 KB]
+f = 4475 [15 evaluated, 5 expanded, t=0.0458004s, 18404 KB]
+f = 4523 [17 evaluated, 6 expanded, t=0.0479872s, 18404 KB]
+f = 4533 [20 evaluated, 7 expanded, t=0.0522997s, 18404 KB]
+f = 4606 [21 evaluated, 8 expanded, t=0.0523939s, 18404 KB]
+New best heuristic value for planopt_add: 3037
+[g=5, 26 evaluated, 10 expanded, t=0.0612168s, 18404 KB]
+New best heuristic value for planopt_add: 2689
+[g=6, 31 evaluated, 11 expanded, t=0.067522s, 18404 KB]
+New best heuristic value for planopt_add: 2518
+[g=7, 36 evaluated, 12 expanded, t=0.0756718s, 18404 KB]
+New best heuristic value for planopt_add: 2115
+[g=8, 43 evaluated, 13 expanded, t=0.0875188s, 18404 KB]
+New best heuristic value for planopt_add: 2068
+[g=9, 48 evaluated, 14 expanded, t=0.0952272s, 18404 KB]
+New best heuristic value for planopt_add: 1659
+[g=10, 52 evaluated, 15 expanded, t=0.102534s, 18404 KB]
+New best heuristic value for planopt_add: 1299
+[g=11, 60 evaluated, 16 expanded, t=0.113364s, 18404 KB]
+New best heuristic value for planopt_add: 1283
+[g=12, 66 evaluated, 17 expanded, t=0.120641s, 18404 KB]
+f = 4610 [2362 evaluated, 4333 expanded, 2752 reopened, t=3.06037s, 18404 KB]
+f = 4611 [2362 evaluated, 4334 expanded, 2752 reopened, t=3.06044s, 18404 KB]
+f = 4615 [2368 evaluated, 4341 expanded, 2752 reopened, t=3.07089s, 18404 KB]
+f = 4629 [2368 evaluated, 4342 expanded, 2752 reopened, t=3.07094s, 18404 KB]
+f = 4630 [2369 evaluated, 4343 expanded, 2752 reopened, t=3.07103s, 18404 KB]
+f = 4631 [2369 evaluated, 4344 expanded, 2752 reopened, t=3.07105s, 18404 KB]
+f = 4632 [2369 evaluated, 4349 expanded, 2756 reopened, t=3.07109s, 18404 KB]
+f = 4636 [2373 evaluated, 4353 expanded, 2758 reopened, t=3.07907s, 18404 KB]
+f = 4640 [2374 evaluated, 4354 expanded, 2758 reopened, t=3.08103s, 18404 KB]
+f = 4641 [2380 evaluated, 4360 expanded, 2758 reopened, t=3.092s, 18404 KB]
+f = 4643 [2381 evaluated, 4361 expanded, 2758 reopened, t=3.094s, 18404 KB]
+f = 4644 [2381 evaluated, 4362 expanded, 2758 reopened, t=3.09404s, 18404 KB]
+f = 4647 [2382 evaluated, 4363 expanded, 2758 reopened, t=3.09626s, 18404 KB]
+f = 4652 [2382 evaluated, 4368 expanded, 2762 reopened, t=3.09632s, 18404 KB]
+f = 4654 [2382 evaluated, 4372 expanded, 2765 reopened, t=3.09635s, 18404 KB]
+f = 4655 [2384 evaluated, 4679 expanded, 3071 reopened, t=3.0994s, 18404 KB]
+f = 4667 [2384 evaluated, 4680 expanded, 3071 reopened, t=3.09943s, 18404 KB]
+f = 4676 [2384 evaluated, 4681 expanded, 3071 reopened, t=3.09946s, 18404 KB]
+f = 4696 [2387 evaluated, 4685 expanded, 3071 reopened, t=3.10474s, 18404 KB]
+f = 4703 [2387 evaluated, 4688 expanded, 3073 reopened, t=3.10477s, 18404 KB]
+f = 4716 [2387 evaluated, 4689 expanded, 3073 reopened, t=3.10479s, 18404 KB]
+f = 4717 [2387 evaluated, 4690 expanded, 3073 reopened, t=3.10482s, 18404 KB]
+f = 4719 [2387 evaluated, 4691 expanded, 3073 reopened, t=3.10484s, 18404 KB]
+f = 4722 [2389 evaluated, 4692 expanded, 3073 reopened, t=3.10875s, 18404 KB]
+f = 4739 [2389 evaluated, 4696 expanded, 3076 reopened, t=3.1088s, 18404 KB]
+f = 4750 [2391 evaluated, 4697 expanded, 3076 reopened, t=3.11255s, 18404 KB]
+f = 4752 [2391 evaluated, 4698 expanded, 3076 reopened, t=3.11257s, 18404 KB]
+f = 4764 [2391 evaluated, 4699 expanded, 3076 reopened, t=3.1126s, 18404 KB]
+f = 4772 [2391 evaluated, 4700 expanded, 3076 reopened, t=3.11262s, 18404 KB]
+f = 4774 [2391 evaluated, 4701 expanded, 3076 reopened, t=3.11265s, 18404 KB]
+f = 4775 [2392 evaluated, 4702 expanded, 3076 reopened, t=3.11478s, 18404 KB]
+f = 4784 [2398 evaluated, 4709 expanded, 3076 reopened, t=3.12514s, 18404 KB]
+f = 4790 [2398 evaluated, 4710 expanded, 3076 reopened, t=3.12519s, 18404 KB]
+f = 4800 [2401 evaluated, 4714 expanded, 3076 reopened, t=3.13048s, 18404 KB]
+f = 4802 [2401 evaluated, 4715 expanded, 3076 reopened, t=3.13051s, 18404 KB]
+f = 4803 [2401 evaluated, 4716 expanded, 3076 reopened, t=3.13053s, 18404 KB]
+f = 4810 [2401 evaluated, 4717 expanded, 3076 reopened, t=3.13055s, 18404 KB]
+f = 4814 [2401 evaluated, 4720 expanded, 3078 reopened, t=3.13058s, 18404 KB]
+f = 4833 [2401 evaluated, 4721 expanded, 3078 reopened, t=3.13061s, 18404 KB]
+f = 4848 [3124 evaluated, 5667 expanded, 3474 reopened, t=4.13389s, 18404 KB]
+f = 4849 [3125 evaluated, 5668 expanded, 3474 reopened, t=4.13588s, 18404 KB]
+f = 4858 [3125 evaluated, 5669 expanded, 3474 reopened, t=4.13592s, 18404 KB]
+f = 4861 [3125 evaluated, 5670 expanded, 3474 reopened, t=4.13594s, 18404 KB]
+f = 4863 [3125 evaluated, 5671 expanded, 3474 reopened, t=4.13597s, 18404 KB]
+f = 4898 [3125 evaluated, 5672 expanded, 3474 reopened, t=4.13599s, 18404 KB]
+f = 4922 [3125 evaluated, 5673 expanded, 3474 reopened, t=4.13602s, 18404 KB]
+f = 4925 [3126 evaluated, 5674 expanded, 3474 reopened, t=4.13816s, 18404 KB]
+f = 4926 [3130 evaluated, 5681 expanded, 3478 reopened, t=4.14597s, 18404 KB]
+f = 4927 [3130 evaluated, 5682 expanded, 3478 reopened, t=4.14601s, 18404 KB]
+f = 4941 [3131 evaluated, 5683 expanded, 3478 reopened, t=4.14775s, 18404 KB]
+f = 4951 [3131 evaluated, 5684 expanded, 3478 reopened, t=4.14778s, 18404 KB]
+f = 4954 [3139 evaluated, 5694 expanded, 3478 reopened, t=4.16206s, 18404 KB]
+f = 4955 [3139 evaluated, 5695 expanded, 3478 reopened, t=4.16209s, 18404 KB]
+f = 5025 [3140 evaluated, 5696 expanded, 3478 reopened, t=4.16394s, 18404 KB]
+f = 5027 [3140 evaluated, 5699 expanded, 3480 reopened, t=4.16399s, 18404 KB]
+f = 5030 [3140 evaluated, 5700 expanded, 3480 reopened, t=4.16402s, 18404 KB]
+f = 5050 [3150 evaluated, 5705 expanded, 3480 reopened, t=4.18196s, 18404 KB]
+f = 5079 [3151 evaluated, 5708 expanded, 3482 reopened, t=4.1838s, 18404 KB]
+f = 5092 [3151 evaluated, 5709 expanded, 3482 reopened, t=4.18383s, 18404 KB]
+f = 5110 [3166 evaluated, 5715 expanded, 3482 reopened, t=4.21084s, 18404 KB]
+f = 5111 [3166 evaluated, 5716 expanded, 3482 reopened, t=4.21093s, 18404 KB]
+f = 5112 [3172 evaluated, 5723 expanded, 3482 reopened, t=4.22127s, 18404 KB]
+f = 5136 [3172 evaluated, 5727 expanded, 3485 reopened, t=4.22131s, 18404 KB]
+f = 5138 [3172 evaluated, 5728 expanded, 3485 reopened, t=4.22134s, 18404 KB]
+f = 5139 [3172 evaluated, 5729 expanded, 3485 reopened, t=4.22137s, 18404 KB]
+f = 5142 [3172 evaluated, 5730 expanded, 3485 reopened, t=4.22139s, 18404 KB]
+f = 5171 [3173 evaluated, 5731 expanded, 3485 reopened, t=4.22146s, 18404 KB]
+f = 5176 [3175 evaluated, 5732 expanded, 3485 reopened, t=4.22537s, 18404 KB]
+f = 5185 [3178 evaluated, 5736 expanded, 3485 reopened, t=4.23082s, 18404 KB]
+f = 5196 [3178 evaluated, 5737 expanded, 3485 reopened, t=4.23085s, 18404 KB]
+f = 5197 [3178 evaluated, 5738 expanded, 3485 reopened, t=4.23088s, 18404 KB]
+f = 5199 [3178 evaluated, 5739 expanded, 3485 reopened, t=4.2309s, 18404 KB]
+f = 5204 [3180 evaluated, 5740 expanded, 3485 reopened, t=4.23499s, 18404 KB]
+f = 5235 [3180 evaluated, 5741 expanded, 3485 reopened, t=4.23501s, 18404 KB]
+f = 5264 [3180 evaluated, 5742 expanded, 3485 reopened, t=4.23504s, 18404 KB]
+f = 5278 [3180 evaluated, 5743 expanded, 3485 reopened, t=4.23507s, 18404 KB]
+f = 5290 [3181 evaluated, 5744 expanded, 3485 reopened, t=4.23514s, 18404 KB]
+f = 5292 [3184 evaluated, 5748 expanded, 3485 reopened, t=4.24091s, 18404 KB]
+f = 5296 [3184 evaluated, 5749 expanded, 3485 reopened, t=4.24094s, 18404 KB]
+f = 5299 [3185 evaluated, 5750 expanded, 3485 reopened, t=4.24102s, 18404 KB]
+f = 5318 [3187 evaluated, 5751 expanded, 3485 reopened, t=4.24462s, 18404 KB]
+f = 5319 [3187 evaluated, 5752 expanded, 3485 reopened, t=4.24465s, 18404 KB]
+f = 5341 [3189 evaluated, 5753 expanded, 3485 reopened, t=4.2486s, 18404 KB]
+f = 5371 [3190 evaluated, 5754 expanded, 3485 reopened, t=4.24868s, 18404 KB]
+f = 5382 [3190 evaluated, 5756 expanded, 3485 reopened, t=4.24871s, 18404 KB]
+f = 5391 [3192 evaluated, 5757 expanded, 3485 reopened, t=4.2528s, 18404 KB]
+f = 5402 [3192 evaluated, 5759 expanded, 3485 reopened, t=4.25284s, 18404 KB]
+f = 5477 [3194 evaluated, 5760 expanded, 3485 reopened, t=4.25676s, 18404 KB]
+f = 5524 [3194 evaluated, 5762 expanded, 3485 reopened, t=4.25681s, 18404 KB]
+f = 5525 [3194 evaluated, 5764 expanded, 3486 reopened, t=4.25684s, 18404 KB]
+f = 5530 [3194 evaluated, 5765 expanded, 3486 reopened, t=4.25687s, 18404 KB]
+f = 5543 [3204 evaluated, 5769 expanded, 3486 reopened, t=4.27455s, 18404 KB]
+f = 5544 [3204 evaluated, 5848 expanded, 3564 reopened, t=4.27485s, 18404 KB]
+f = 5545 [3204 evaluated, 5850 expanded, 3565 reopened, t=4.27487s, 18404 KB]
+f = 5558 [3204 evaluated, 5851 expanded, 3565 reopened, t=4.2749s, 18404 KB]
+f = 5585 [3205 evaluated, 5852 expanded, 3565 reopened, t=4.2767s, 18404 KB]
+f = 5586 [3206 evaluated, 5853 expanded, 3565 reopened, t=4.27678s, 18404 KB]
+f = 5592 [3206 evaluated, 5854 expanded, 3565 reopened, t=4.27682s, 18404 KB]
+f = 5607 [3221 evaluated, 5860 expanded, 3565 reopened, t=4.30343s, 18404 KB]
+f = 5609 [3221 evaluated, 5861 expanded, 3565 reopened, t=4.30348s, 18404 KB]
+f = 5620 [3241 evaluated, 5869 expanded, 3565 reopened, t=4.33989s, 18404 KB]
+f = 5630 [3241 evaluated, 5870 expanded, 3565 reopened, t=4.33995s, 18404 KB]
+f = 5743 [3243 evaluated, 5874 expanded, 3567 reopened, t=4.34404s, 18404 KB]
+f = 5764 [3243 evaluated, 5876 expanded, 3567 reopened, t=4.34408s, 18404 KB]
+f = 5790 [3243 evaluated, 5878 expanded, 3567 reopened, t=4.3441s, 18404 KB]
+f = 5825 [3244 evaluated, 5879 expanded, 3567 reopened, t=4.34622s, 18404 KB]
+f = 5828 [3244 evaluated, 5880 expanded, 3567 reopened, t=4.34627s, 18404 KB]
+f = 5847 [3335 evaluated, 5985 expanded, 3608 reopened, t=4.49268s, 18404 KB]
+f = 5850 [3337 evaluated, 5986 expanded, 3608 reopened, t=4.49664s, 18404 KB]
+f = 5862 [3337 evaluated, 5988 expanded, 3608 reopened, t=4.49668s, 18404 KB]
+f = 5875 [3337 evaluated, 5989 expanded, 3608 reopened, t=4.49671s, 18404 KB]
+f = 5876 [3339 evaluated, 5990 expanded, 3608 reopened, t=4.50067s, 18404 KB]
+f = 5896 [3339 evaluated, 5991 expanded, 3608 reopened, t=4.5007s, 18404 KB]
+f = 5897 [3339 evaluated, 5994 expanded, 3610 reopened, t=4.50073s, 18404 KB]
+f = 5904 [3339 evaluated, 5996 expanded, 3610 reopened, t=4.50077s, 18404 KB]
+f = 5917 [3341 evaluated, 5997 expanded, 3610 reopened, t=4.50485s, 18404 KB]
+f = 5918 [3341 evaluated, 5999 expanded, 3611 reopened, t=4.50489s, 18404 KB]
+f = 5919 [3341 evaluated, 6000 expanded, 3611 reopened, t=4.50492s, 18404 KB]
+f = 5927 [3341 evaluated, 6002 expanded, 3611 reopened, t=4.50495s, 18404 KB]
+f = 5930 [3341 evaluated, 6075 expanded, 3683 reopened, t=4.5052s, 18404 KB]
+f = 5946 [3343 evaluated, 6076 expanded, 3683 reopened, t=4.50881s, 18404 KB]
+f = 5950 [3343 evaluated, 6078 expanded, 3683 reopened, t=4.50884s, 18404 KB]
+f = 5957 [3343 evaluated, 6080 expanded, 3683 reopened, t=4.50886s, 18404 KB]
+f = 5970 [3345 evaluated, 6081 expanded, 3683 reopened, t=4.51262s, 18404 KB]
+f = 5971 [3345 evaluated, 6084 expanded, 3685 reopened, t=4.51265s, 18404 KB]
+f = 5976 [3345 evaluated, 6087 expanded, 3685 reopened, t=4.51268s, 18404 KB]
+f = 5996 [3345 evaluated, 6088 expanded, 3685 reopened, t=4.51271s, 18404 KB]
+f = 6005 [3345 evaluated, 6089 expanded, 3685 reopened, t=4.51273s, 18404 KB]
+f = 6033 [3345 evaluated, 6091 expanded, 3685 reopened, t=4.51276s, 18404 KB]
+f = 6046 [3345 evaluated, 6093 expanded, 3685 reopened, t=4.51278s, 18404 KB]
+f = 6054 [3345 evaluated, 6094 expanded, 3685 reopened, t=4.5128s, 18404 KB]
+f = 6057 [3345 evaluated, 6096 expanded, 3685 reopened, t=4.51283s, 18404 KB]
+f = 6072 [3345 evaluated, 6098 expanded, 3685 reopened, t=4.51285s, 18404 KB]
+f = 6073 [3345 evaluated, 6101 expanded, 3687 reopened, t=4.51288s, 18404 KB]
+f = 6087 [3345 evaluated, 6102 expanded, 3687 reopened, t=4.5129s, 18404 KB]
+f = 6099 [3359 evaluated, 6108 expanded, 3687 reopened, t=4.54031s, 18404 KB]
+f = 6100 [3359 evaluated, 6110 expanded, 3688 reopened, t=4.54037s, 18404 KB]
+f = 6103 [3359 evaluated, 6111 expanded, 3688 reopened, t=4.5404s, 18404 KB]
+f = 6104 [3359 evaluated, 6114 expanded, 3690 reopened, t=4.54043s, 18404 KB]
+f = 6109 [3359 evaluated, 6115 expanded, 3690 reopened, t=4.54046s, 18404 KB]
+f = 6124 [3359 evaluated, 6116 expanded, 3690 reopened, t=4.54049s, 18404 KB]
+f = 6125 [3359 evaluated, 6118 expanded, 3691 reopened, t=4.54051s, 18404 KB]
+f = 6135 [3359 evaluated, 6119 expanded, 3691 reopened, t=4.54054s, 18404 KB]
+f = 6140 [3359 evaluated, 6120 expanded, 3691 reopened, t=4.54056s, 18404 KB]
+f = 6145 [3359 evaluated, 6122 expanded, 3691 reopened, t=4.54059s, 18404 KB]
+f = 6162 [3359 evaluated, 6124 expanded, 3691 reopened, t=4.54061s, 18404 KB]
+f = 6171 [3359 evaluated, 6125 expanded, 3691 reopened, t=4.54063s, 18404 KB]
+f = 6186 [3359 evaluated, 6126 expanded, 3691 reopened, t=4.54066s, 18404 KB]
+f = 6187 [3359 evaluated, 6129 expanded, 3693 reopened, t=4.54068s, 18404 KB]
+f = 6206 [3359 evaluated, 6130 expanded, 3693 reopened, t=4.54071s, 18404 KB]
+f = 6207 [3379 evaluated, 6138 expanded, 3693 reopened, t=4.57783s, 18404 KB]
+f = 6208 [3379 evaluated, 6140 expanded, 3694 reopened, t=4.57789s, 18404 KB]
+f = 6221 [3379 evaluated, 6141 expanded, 3694 reopened, t=4.57791s, 18404 KB]
+f = 6233 [3379 evaluated, 6143 expanded, 3694 reopened, t=4.57795s, 18404 KB]
+f = 6317 [3381 evaluated, 6147 expanded, 3696 reopened, t=4.58214s, 18404 KB]
+f = 6340 [3381 evaluated, 6148 expanded, 3696 reopened, t=4.58217s, 18404 KB]
+f = 6342 [3381 evaluated, 6150 expanded, 3696 reopened, t=4.5822s, 18404 KB]
+f = 6367 [3381 evaluated, 6151 expanded, 3696 reopened, t=4.58224s, 18404 KB]
+f = 6374 [3381 evaluated, 6153 expanded, 3696 reopened, t=4.58226s, 18404 KB]
+f = 6375 [3381 evaluated, 6156 expanded, 3698 reopened, t=4.5823s, 18404 KB]
+f = 6383 [3381 evaluated, 6157 expanded, 3698 reopened, t=4.58233s, 18404 KB]
+f = 6426 [3381 evaluated, 6159 expanded, 3698 reopened, t=4.58236s, 18404 KB]
+f = 6430 [3381 evaluated, 6161 expanded, 3698 reopened, t=4.58239s, 18404 KB]
+f = 6459 [3381 evaluated, 6162 expanded, 3698 reopened, t=4.58241s, 18404 KB]
+f = 6466 [3381 evaluated, 6164 expanded, 3698 reopened, t=4.58244s, 18404 KB]
+f = 6473 [3381 evaluated, 6166 expanded, 3698 reopened, t=4.58246s, 18404 KB]
+f = 6493 [3381 evaluated, 6167 expanded, 3698 reopened, t=4.58248s, 18404 KB]
+f = 6494 [3381 evaluated, 6170 expanded, 3700 reopened, t=4.58251s, 18404 KB]
+f = 6500 [3381 evaluated, 6171 expanded, 3700 reopened, t=4.58255s, 18404 KB]
+f = 6520 [3381 evaluated, 6172 expanded, 3700 reopened, t=4.58258s, 18404 KB]
+f = 6521 [3381 evaluated, 6174 expanded, 3701 reopened, t=4.58262s, 18404 KB]
+f = 6542 [3381 evaluated, 6175 expanded, 3701 reopened, t=4.58265s, 18404 KB]
+f = 6595 [3381 evaluated, 6177 expanded, 3701 reopened, t=4.58268s, 18404 KB]
+f = 6612 [3381 evaluated, 6179 expanded, 3701 reopened, t=4.58271s, 18404 KB]
+f = 6613 [3381 evaluated, 6182 expanded, 3703 reopened, t=4.58275s, 18404 KB]
+f = 6622 [3381 evaluated, 6183 expanded, 3703 reopened, t=4.58277s, 18404 KB]
+f = 6678 [3381 evaluated, 6185 expanded, 3703 reopened, t=4.58281s, 18404 KB]
+f = 6681 [3381 evaluated, 6187 expanded, 3703 reopened, t=4.58284s, 18404 KB]
+f = 6695 [3381 evaluated, 6189 expanded, 3703 reopened, t=4.58287s, 18404 KB]
+f = 6696 [3381 evaluated, 6192 expanded, 3705 reopened, t=4.58291s, 18404 KB]
+f = 6704 [3381 evaluated, 6193 expanded, 3705 reopened, t=4.58294s, 18404 KB]
+f = 6705 [3382 evaluated, 6194 expanded, 3705 reopened, t=4.58491s, 18404 KB]
+f = 6720 [3382 evaluated, 6196 expanded, 3705 reopened, t=4.58495s, 18404 KB]
+f = 6748 [3383 evaluated, 6197 expanded, 3705 reopened, t=4.5869s, 18404 KB]
+f = 6749 [3383 evaluated, 6200 expanded, 3707 reopened, t=4.58694s, 18404 KB]
+f = 6764 [3383 evaluated, 6201 expanded, 3707 reopened, t=4.58697s, 18404 KB]
+f = 6775 [3383 evaluated, 6203 expanded, 3707 reopened, t=4.58699s, 18404 KB]
+f = 6776 [3383 evaluated, 6205 expanded, 3708 reopened, t=4.58702s, 18404 KB]
+f = 6831 [3383 evaluated, 6206 expanded, 3708 reopened, t=4.58704s, 18404 KB]
+f = 6832 [3383 evaluated, 6209 expanded, 3710 reopened, t=4.58707s, 18404 KB]
+f = 6858 [3383 evaluated, 6210 expanded, 3710 reopened, t=4.58709s, 18404 KB]
+f = 6859 [3383 evaluated, 6212 expanded, 3711 reopened, t=4.58711s, 18404 KB]
+f = 6943 [3383 evaluated, 6213 expanded, 3711 reopened, t=4.58713s, 18404 KB]
+f = 6948 [3384 evaluated, 6214 expanded, 3711 reopened, t=4.58897s, 18404 KB]
+f = 6976 [3385 evaluated, 6215 expanded, 3711 reopened, t=4.59074s, 18404 KB]
+f = 7257 [3386 evaluated, 6216 expanded, 3711 reopened, t=4.59269s, 18404 KB]
+f = 7273 [3387 evaluated, 6217 expanded, 3711 reopened, t=4.59463s, 18404 KB]
+f = 7513 [3388 evaluated, 6218 expanded, 3711 reopened, t=4.59658s, 18404 KB]
+f = 7518 [3389 evaluated, 6219 expanded, 3711 reopened, t=4.59853s, 18404 KB]
+f = 7546 [3390 evaluated, 6220 expanded, 3711 reopened, t=4.60048s, 18404 KB]
+f = 8294 [3391 evaluated, 6221 expanded, 3711 reopened, t=4.60243s, 18404 KB]
+f = 8505 [3391 evaluated, 6222 expanded, 3711 reopened, t=4.60245s, 18404 KB]
+f = 8533 [3391 evaluated, 6223 expanded, 3711 reopened, t=4.60248s, 18404 KB]
+f = 8603 [3391 evaluated, 6224 expanded, 3711 reopened, t=4.6025s, 18404 KB]
+f = 8976 [3391 evaluated, 6225 expanded, 3711 reopened, t=4.60252s, 18404 KB]
+f = 8982 [3391 evaluated, 6226 expanded, 3711 reopened, t=4.60254s, 18404 KB]
+f = 9202 [3391 evaluated, 6227 expanded, 3711 reopened, t=4.60256s, 18404 KB]
+f = 9232 [3391 evaluated, 6228 expanded, 3711 reopened, t=4.60258s, 18404 KB]
+f = 9307 [3391 evaluated, 6229 expanded, 3711 reopened, t=4.6026s, 18404 KB]
+f = 9713 [3391 evaluated, 6230 expanded, 3711 reopened, t=4.60262s, 18404 KB]
+Completely explored state space -- no solution!
+Actual search time: 4.57769s [t=4.60264s]
+Expanded 6231 state(s).
+Reopened 3711 state(s).
+Evaluated 3391 state(s).
+Evaluations: 3391
+Generated 24886 state(s).
+Dead ends: 871 state(s).
+Expanded until last jump: 6230 state(s).
+Reopened until last jump: 3711 state(s).
+Evaluated until last jump: 3391 state(s).
+Generated until last jump: 24885 state(s).
+Number of registered states: 3391
+Int hash set load factor: 3391/4096 = 0.827881
+Int hash set resizes: 12
+Search time: 4.58053s
+Total time: 4.60265s
+Search stopped without finding a solution.
+Peak memory: 18404 KB
+Remove intermediate file output.sas
+search exit code: 12
+
+Driver aborting after search
+

@@ -1,4 +1,5 @@
-a)
+exercise1
+------ a ----------
 1)
 
 Problema = (V,I,{o1,o2},G)
@@ -39,3 +40,10 @@ o2 = (T, x2 /\ ~x1)
 oi-1 = (T, xi-1/\~xi-2)
 oi = (T, xi /\ ~xi-1)
 G = {x1 -> T, x2 -> T, ..., xi -> T}
+
+---- b ------
+h*(I) = 6
+h+(I) = 4
+hmax(I) = 2
+hadd(I) = 6
+

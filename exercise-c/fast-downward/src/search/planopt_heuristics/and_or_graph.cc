@@ -143,61 +143,57 @@ namespace planopt_heuristics
         /*
           TODO: add your code for exercise 2 (c) here.
         */
-        using QueueElement = std::pair<double, NodeID>;
-        std::priority_queue<QueueElement, std::vector<QueueElement>, std::greater<pair<int, NodeID>>> pq;
+        priority_queue<pair<int, NodeID>, vector<pair<int, NodeID>>, greater<pair<int, NodeID>>> queue;
 
         for (AndOrGraphNode &node : nodes)
         {
             node.forced_true = false;
             node.num_forced_successors = 0;
-            node.additive_cost = std::numeric_limits<double>::infinity();
+            node.additive_cost = (node.type == NodeType::AND && node.successor_ids.empty())
+                                     ? 0
+                                     : std::numeric_limits<int>::max();
 
-            if (node.type == NodeType::AND && node.successor_ids.empty())
+            if (node.additive_cost == 0)
             {
-                node.additive_cost = 0;
-                pq.push({node.additive_cost, node.id});
+                queue.emplace(node.additive_cost, node.id);
             }
         }
 
-        while (!pq.empty())
+        while (!queue.empty())
         {
-            double current_cost = pq.top().first;
-            NodeID current_id = pq.top().second;
-            pq.pop();
+            NodeID node_id = queue.top().second;
+            queue.pop();
+            AndOrGraphNode &node = nodes[node_id];
 
-            AndOrGraphNode &current_node = nodes[current_id];
-
-            if (current_node.forced_true)
-            {
+            if (node.forced_true)
                 continue;
-            }
-            current_node.forced_true = true;
 
-            for (NodeID predecessor_id : current_node.predecessor_ids)
+            node.forced_true = true;
+
+            for (NodeID predecessor_id : node.predecessor_ids)
             {
-                AndOrGraphNode &predecessor_node = nodes[predecessor_id];
+                AndOrGraphNode &predecessor = nodes[predecessor_id];
 
-                predecessor_node.num_forced_successors++;
+                predecessor.num_forced_successors++;
 
-                if (predecessor_node.type == NodeType::AND)
+                if (predecessor.type == NodeType::AND &&
+                    predecessor.num_forced_successors == predecessor.successor_ids.size())
                 {
-                    if (predecessor_node.num_forced_successors == predecessor_node.successor_ids.size())
-                    {
-                        double total_cost = current_cost + predecessor_node.direct_cost;
-                        predecessor_node.additive_cost = total_cost;
-                        pq.push({predecessor_node.additive_cost, predecessor_id});
-                    }
+                    int total_cost = predecessor.direct_cost;
+                    for (NodeID successor_id : predecessor.successor_ids)
+                        total_cost += nodes[successor_id].additive_cost;
+                    if (total_cost < predecessor.additive_cost)
+                        predecessor.additive_cost = total_cost;
+                        queue.emplace(predecessor.additive_cost, predecessor_id);
                 }
-                else if (predecessor_node.type == NodeType::OR)
+                else if (predecessor.type == NodeType::OR && predecessor.num_forced_successors > 0)
                 {
-                    if (predecessor_node.num_forced_successors > 0)
+                    int current_cost = node.direct_cost + node.additive_cost;
+                    if (current_cost < predecessor.additive_cost)
                     {
-                        double new_cost = current_cost + predecessor_node.direct_cost;
-                        if (new_cost < predecessor_node.additive_cost)
-                        {
-                            predecessor_node.additive_cost = new_cost;
-                            pq.push({predecessor_node.additive_cost, predecessor_id});
-                        }
+                        predecessor.additive_cost = current_cost;
+                        predecessor.achiever = node_id; 
+                        queue.emplace(predecessor.additive_cost, predecessor_id);
                     }
                 }
             }

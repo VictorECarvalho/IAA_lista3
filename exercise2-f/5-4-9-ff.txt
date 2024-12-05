@@ -1,0 +1,172 @@
+Parsing...
+Parsing: [0.000s CPU, 0.001s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.000s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 20 rules.
+Computing model... [0.010s CPU, 0.011s wall-clock]
+1635 relevant atoms
+730 auxiliary atoms
+2365 final queue length
+4667 total queue pushes
+Completing instantiation... [0.030s CPU, 0.027s wall-clock]
+Instantiating: [0.040s CPU, 0.041s wall-clock]
+Computing fact groups...
+Finding invariants...
+7 initial candidates
+Finding invariants: [0.000s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+20 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.003s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.002s wall-clock]
+Translating task: [0.030s CPU, 0.031s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+32 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.011s wall-clock]
+Reordering and filtering variables...
+40 of 40 variables necessary.
+16 of 40 mutex groups necessary.
+1031 of 1031 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.006s wall-clock]
+Translator variables: 40
+Translator derived variables: 0
+Translator facts: 195
+Translator goal facts: 16
+Translator mutex groups: 16
+Translator total mutex groups size: 139
+Translator operators: 1031
+Translator axioms: 0
+Translator task size: 8234
+Translator peak memory: 35080 KB
+Writing output... [0.000s CPU, 0.006s wall-clock]
+Done! [0.100s CPU, 0.102s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/filipe/Desktop/cu/IAA_lista3-main/exercise-c/fast-downward/builds/release/bin/downward --heuristic 'h=planopt_ff()' --search 'astar(h)' --internal-plan-file sas_plan < output.sas
+reading input... [t=2.6209e-05s]
+done reading input! [t=0.00260815s]
+Building successor generator...done! [t=0.00448595s]
+peak memory difference for successor generator creation: 232 KB
+time for successor generation creation: 0.000450994s
+Variables: 40
+FactPairs: 195
+Bytes per state: 12
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for planopt_ff: 61
+[g=0, 1 evaluated, 0 expanded, t=0.00497224s, 11308 KB]
+f = 61 [1 evaluated, 0 expanded, t=0.00499864s, 11308 KB]
+Initial heuristic value for planopt_ff: 61
+pruning method: none
+New best heuristic value for planopt_ff: 56
+[g=1, 2 evaluated, 1 expanded, t=0.00539288s, 11308 KB]
+New best heuristic value for planopt_ff: 50
+[g=2, 5 evaluated, 2 expanded, t=0.00638561s, 11308 KB]
+New best heuristic value for planopt_ff: 48
+[g=3, 8 evaluated, 3 expanded, t=0.00732255s, 11308 KB]
+New best heuristic value for planopt_ff: 44
+[g=4, 12 evaluated, 4 expanded, t=0.00845553s, 11308 KB]
+New best heuristic value for planopt_ff: 39
+[g=5, 14 evaluated, 5 expanded, t=0.00901573s, 11308 KB]
+New best heuristic value for planopt_ff: 35
+[g=7, 22 evaluated, 7 expanded, t=0.0109051s, 11308 KB]
+New best heuristic value for planopt_ff: 32
+[g=8, 27 evaluated, 8 expanded, t=0.0121627s, 11308 KB]
+New best heuristic value for planopt_ff: 30
+[g=9, 33 evaluated, 9 expanded, t=0.0133605s, 11308 KB]
+New best heuristic value for planopt_ff: 29
+[g=10, 38 evaluated, 10 expanded, t=0.0142767s, 11308 KB]
+New best heuristic value for planopt_ff: 26
+[g=10, 42 evaluated, 10 expanded, t=0.0148704s, 11308 KB]
+New best heuristic value for planopt_ff: 25
+[g=11, 44 evaluated, 11 expanded, t=0.0151788s, 11308 KB]
+New best heuristic value for planopt_ff: 21
+[g=12, 49 evaluated, 12 expanded, t=0.015814s, 11308 KB]
+New best heuristic value for planopt_ff: 16
+[g=13, 54 evaluated, 13 expanded, t=0.0164205s, 11308 KB]
+New best heuristic value for planopt_ff: 14
+[g=14, 62 evaluated, 14 expanded, t=0.0171915s, 11308 KB]
+New best heuristic value for planopt_ff: 13
+[g=15, 66 evaluated, 15 expanded, t=0.0175422s, 11308 KB]
+New best heuristic value for planopt_ff: 11
+[g=15, 67 evaluated, 15 expanded, t=0.0176221s, 11308 KB]
+New best heuristic value for planopt_ff: 7
+[g=16, 72 evaluated, 16 expanded, t=0.0179541s, 11308 KB]
+New best heuristic value for planopt_ff: 6
+[g=17, 77 evaluated, 17 expanded, t=0.0182241s, 11308 KB]
+New best heuristic value for planopt_ff: 5
+[g=17, 78 evaluated, 17 expanded, t=0.0182832s, 11308 KB]
+New best heuristic value for planopt_ff: 4
+[g=17, 80 evaluated, 17 expanded, t=0.0183787s, 11308 KB]
+New best heuristic value for planopt_ff: 1
+[g=18, 84 evaluated, 18 expanded, t=0.0185449s, 11308 KB]
+New best heuristic value for planopt_ff: 0
+[g=19, 90 evaluated, 19 expanded, t=0.018721s, 11308 KB]
+Solution found!
+Actual search time: 0.0137851s [t=0.0188139s]
+discard heart2 club4 hearta (1)
+discard spade2 club5 spadea (1)
+move club4 diamond2 spade5 (1)
+discard diamond2 club2 diamonda (1)
+discard club2 pile2 cluba (1)
+move club5 diamond3 pile2 (1)
+discard diamond3 club3 diamond2 (1)
+discard club3 pile1 club2 (1)
+discard club4 spade5 club3 (1)
+discard club5 pile2 club4 (1)
+move spade5 spade3 pile1 (1)
+discard spade3 heart3 spade2 (1)
+discard heart3 diamond5 heart2 (1)
+discard heart4 spade4 heart3 (1)
+discard spade4 heart5 spade3 (1)
+discard heart5 diamond4 heart4 (1)
+discard diamond4 pile0 diamond3 (1)
+discard spade5 pile1 spade4 (1)
+discard diamond5 pile3 diamond4 (1)
+Plan length: 19 step(s).
+Plan cost: 19
+Expanded 20 state(s).
+Reopened 0 state(s).
+Evaluated 93 state(s).
+Evaluations: 93
+Generated 94 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 93
+Int hash set load factor: 93/128 = 0.726562
+Int hash set resizes: 7
+Search time: 0.0142279s
+Total time: 0.0188175s
+Solution found.
+Peak memory: 11308 KB
+Remove intermediate file output.sas
+search exit code: 0
+

@@ -1,0 +1,135 @@
+Parsing...
+Parsing: [0.000s CPU, 0.004s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.010s CPU, 0.005s wall-clock]
+Generated 20 rules.
+Computing model... [0.040s CPU, 0.048s wall-clock]
+8247 relevant atoms
+2514 auxiliary atoms
+10761 final queue length
+23517 total queue pushes
+Completing instantiation... [0.170s CPU, 0.163s wall-clock]
+Instantiating: [0.220s CPU, 0.219s wall-clock]
+Computing fact groups...
+Finding invariants...
+7 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.004s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+48 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.010s CPU, 0.010s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.016s wall-clock]
+Translating task: [0.210s CPU, 0.208s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+63 propositions removed
+Detecting unreachable propositions: [0.120s CPU, 0.124s wall-clock]
+Reordering and filtering variables...
+99 of 99 variables necessary.
+44 of 99 mutex groups necessary.
+5888 of 5888 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.030s CPU, 0.031s wall-clock]
+Translator variables: 99
+Translator derived variables: 0
+Translator facts: 688
+Translator goal facts: 44
+Translator mutex groups: 44
+Translator total mutex groups size: 545
+Translator operators: 5888
+Translator axioms: 0
+Translator task size: 45426
+Translator peak memory: 62836 KB
+Writing output... [0.030s CPU, 0.033s wall-clock]
+Done! [0.630s CPU, 0.644s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/filipe/Desktop/cu/IAA_lista3-main/exercise-c/fast-downward/builds/release/bin/downward --heuristic 'h=planopt_ff()' --search 'astar(h)' --internal-plan-file sas_plan < output.sas
+reading input... [t=2.8243e-05s]
+done reading input! [t=0.0141622s]
+Building successor generator...done! [t=0.022119s]
+peak memory difference for successor generator creation: 236 KB
+time for successor generation creation: 0.00229433s
+Variables: 99
+FactPairs: 688
+Bytes per state: 28
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for planopt_ff: 168
+[g=0, 1 evaluated, 0 expanded, t=0.0246368s, 18408 KB]
+f = 168 [1 evaluated, 0 expanded, t=0.0246996s, 18408 KB]
+Initial heuristic value for planopt_ff: 168
+pruning method: none
+New best heuristic value for planopt_ff: 167
+[g=1, 4 evaluated, 1 expanded, t=0.0311596s, 18408 KB]
+New best heuristic value for planopt_ff: 166
+[g=2, 9 evaluated, 2 expanded, t=0.0416125s, 18408 KB]
+f = 169 [11 evaluated, 4 expanded, t=0.0437131s, 18408 KB]
+New best heuristic value for planopt_ff: 164
+[g=4, 12 evaluated, 5 expanded, t=0.0457642s, 18408 KB]
+New best heuristic value for planopt_ff: 159
+[g=5, 13 evaluated, 6 expanded, t=0.0477921s, 18408 KB]
+New best heuristic value for planopt_ff: 154
+[g=6, 15 evaluated, 7 expanded, t=0.0519635s, 18408 KB]
+New best heuristic value for planopt_ff: 149
+[g=7, 18 evaluated, 8 expanded, t=0.0584124s, 18408 KB]
+New best heuristic value for planopt_ff: 144
+[g=8, 22 evaluated, 9 expanded, t=0.0661032s, 18408 KB]
+New best heuristic value for planopt_ff: 140
+[g=9, 28 evaluated, 10 expanded, t=0.0758229s, 18408 KB]
+New best heuristic value for planopt_ff: 136
+[g=11, 33 evaluated, 12 expanded, t=0.0831583s, 18408 KB]
+New best heuristic value for planopt_ff: 135
+[g=14, 272 evaluated, 204 expanded, 42 reopened, t=0.462091s, 18408 KB]
+f = 170 [3301 evaluated, 2732 expanded, 289 reopened, t=4.58534s, 18408 KB]
+f = 171 [3359 evaluated, 3047 expanded, 561 reopened, t=4.65439s, 18408 KB]
+f = 172 [3369 evaluated, 3055 expanded, 561 reopened, t=4.6625s, 18408 KB]
+f = 173 [3389 evaluated, 3815 expanded, 1301 reopened, t=4.6833s, 18408 KB]
+f = 174 [3389 evaluated, 3823 expanded, 1305 reopened, t=4.68338s, 18408 KB]
+Completely explored state space -- no solution!
+Actual search time: 4.6588s [t=4.68354s]
+Expanded 3825 state(s).
+Reopened 1305 state(s).
+Evaluated 3391 state(s).
+Evaluations: 3391
+Generated 15780 state(s).
+Dead ends: 871 state(s).
+Expanded until last jump: 3823 state(s).
+Reopened until last jump: 1305 state(s).
+Evaluated until last jump: 3389 state(s).
+Generated until last jump: 15772 state(s).
+Number of registered states: 3391
+Int hash set load factor: 3391/4096 = 0.827881
+Int hash set resizes: 12
+Search time: 4.66132s
+Total time: 4.68354s
+Search stopped without finding a solution.
+Peak memory: 18408 KB
+Remove intermediate file output.sas
+search exit code: 12
+
+Driver aborting after search
+

@@ -1,0 +1,189 @@
+Parsing...
+Parsing: [0.000s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 20 rules.
+Computing model... [0.020s CPU, 0.023s wall-clock]
+3688 relevant atoms
+1376 auxiliary atoms
+5064 final queue length
+10500 total queue pushes
+Completing instantiation... [0.070s CPU, 0.067s wall-clock]
+Instantiating: [0.090s CPU, 0.094s wall-clock]
+Computing fact groups...
+Finding invariants...
+7 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.002s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+32 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.006s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.006s wall-clock]
+Translating task: [0.070s CPU, 0.074s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+45 propositions removed
+Detecting unreachable propositions: [0.030s CPU, 0.027s wall-clock]
+Reordering and filtering variables...
+65 of 65 variables necessary.
+28 of 65 mutex groups necessary.
+2468 of 2468 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.010s CPU, 0.013s wall-clock]
+Translator variables: 65
+Translator derived variables: 0
+Translator facts: 377
+Translator goal facts: 28
+Translator mutex groups: 28
+Translator total mutex groups size: 284
+Translator operators: 2468
+Translator axioms: 0
+Translator task size: 19435
+Translator peak memory: 43816 KB
+Writing output... [0.010s CPU, 0.013s wall-clock]
+Done! [0.230s CPU, 0.236s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/filipe/Desktop/IAA_lista3-main/exercise-c/fast-downward/builds/release/bin/downward --heuristic 'h=blind()' --search 'astar(h)' --internal-plan-file sas_plan < output.sas
+reading input... [t=0s]
+done reading input! [t=0.00599892s]
+Initializing blind search heuristic...
+Building successor generator...done! [t=0.00799945s]
+peak memory difference for successor generator creation: 568 KB
+time for successor generation creation: 0.00100008s
+Variables: 65
+FactPairs: 377
+Bytes per state: 20
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for blind: 1
+[g=0, 1 evaluated, 0 expanded, t=0.00799945s, 11280 KB]
+f = 1 [1 evaluated, 0 expanded, t=0.00799945s, 11280 KB]
+Initial heuristic value for blind: 1
+pruning method: none
+f = 2 [3 evaluated, 1 expanded, t=0.00799945s, 11280 KB]
+f = 3 [7 evaluated, 3 expanded, t=0.00799945s, 11280 KB]
+f = 4 [17 evaluated, 7 expanded, t=0.00799945s, 11280 KB]
+f = 5 [33 evaluated, 17 expanded, t=0.00799945s, 11280 KB]
+f = 6 [58 evaluated, 33 expanded, t=0.00799945s, 11280 KB]
+f = 7 [97 evaluated, 58 expanded, t=0.00799945s, 11280 KB]
+f = 8 [149 evaluated, 97 expanded, t=0.00899936s, 11280 KB]
+f = 9 [200 evaluated, 149 expanded, t=0.00899936s, 11280 KB]
+f = 10 [261 evaluated, 200 expanded, t=0.00899936s, 11280 KB]
+f = 11 [345 evaluated, 261 expanded, t=0.00899936s, 11280 KB]
+f = 12 [469 evaluated, 345 expanded, t=0.00899936s, 11280 KB]
+f = 13 [669 evaluated, 469 expanded, t=0.00999919s, 11280 KB]
+f = 14 [939 evaluated, 669 expanded, t=0.00999919s, 11280 KB]
+f = 15 [1221 evaluated, 939 expanded, t=0.010999s, 11280 KB]
+f = 16 [1504 evaluated, 1221 expanded, t=0.011999s, 11280 KB]
+f = 17 [1865 evaluated, 1504 expanded, t=0.011999s, 11280 KB]
+f = 18 [2311 evaluated, 1865 expanded, t=0.0129991s, 11280 KB]
+f = 19 [2884 evaluated, 2311 expanded, t=0.0139991s, 11280 KB]
+f = 20 [3653 evaluated, 2884 expanded, t=0.015999s, 11280 KB]
+f = 21 [4660 evaluated, 3653 expanded, t=0.0189922s, 11468 KB]
+f = 22 [6023 evaluated, 4660 expanded, t=0.0219914s, 11468 KB]
+f = 23 [8052 evaluated, 6023 expanded, t=0.0259913s, 11600 KB]
+f = 24 [11197 evaluated, 8052 expanded, t=0.0329912s, 11736 KB]
+f = 25 [16125 evaluated, 11197 expanded, t=0.042991s, 12132 KB]
+f = 26 [23804 evaluated, 16125 expanded, t=0.0589907s, 12272 KB]
+f = 27 [35858 evaluated, 23804 expanded, t=0.0859904s, 13072 KB]
+f = 28 [54798 evaluated, 35858 expanded, t=0.12399s, 13752 KB]
+f = 29 [84122 evaluated, 54798 expanded, t=0.187989s, 15484 KB]
+f = 30 [129422 evaluated, 84122 expanded, t=0.288988s, 18748 KB]
+f = 31 [202079 evaluated, 129422 expanded, t=0.435982s, 21320 KB]
+f = 32 [323033 evaluated, 202079 expanded, t=0.689964s, 28316 KB]
+f = 33 [522652 evaluated, 323033 expanded, t=1.12496s, 41328 KB]
+f = 34 [841084 evaluated, 522652 expanded, t=1.87094s, 53500 KB]
+f = 35 [1334966 evaluated, 841084 expanded, t=3.07685s, 81864 KB]
+f = 36 [2084284 evaluated, 1334966 expanded, t=5.07676s, 128636 KB]
+f = 37 [3196747 evaluated, 2084284 expanded, t=7.9386s, 173696 KB]
+f = 38 [4822637 evaluated, 3196747 expanded, t=12.4283s, 272384 KB]
+f = 39 [7169541 evaluated, 4822637 expanded, t=19.8351s, 479084 KB]
+New best heuristic value for blind: 0
+[g=39, 7190587 evaluated, 4839624 expanded, t=19.9001s, 479084 KB]
+Solution found!
+Actual search time: 19.8921s [t=19.9001s]
+discard club2 heart2 cluba (1)
+discard heart2 spade6 hearta (1)
+discard club3 club5 club2 (1)
+move club5 club4 spade6 (1)
+discard club4 heart8 club3 (1)
+discard club5 spade6 club4 (1)
+move spade7 diamond4 heart8 (1)
+move diamond4 club7 spade5 (1)
+move spade6 diamond7 spade7 (1)
+move heart5 club6 spade6 (1)
+discard club6 diamond5 club5 (1)
+discard club7 heart4 club6 (1)
+move heart4 club8 heart5 (1)
+move diamond7 heart3 club8 (1)
+discard heart3 pile4 heart2 (1)
+move diamond5 spade2 pile4 (1)
+discard spade2 spade8 spadea (1)
+discard heart4 heart5 heart3 (1)
+discard heart5 spade6 heart4 (1)
+move diamond4 spade5 diamond5 (1)
+move spade5 heart7 spade6 (1)
+move heart7 spade3 spade8 (1)
+discard spade3 heart6 spade2 (1)
+discard heart6 spade4 heart5 (1)
+discard spade4 diamond3 spade3 (1)
+discard spade5 spade6 spade4 (1)
+discard spade6 spade7 spade5 (1)
+discard spade7 heart8 spade6 (1)
+discard heart7 spade8 heart6 (1)
+discard spade8 diamond2 spade7 (1)
+discard diamond2 pile0 diamonda (1)
+discard diamond3 pile1 diamond2 (1)
+discard diamond4 diamond5 diamond3 (1)
+discard diamond5 pile4 diamond4 (1)
+discard heart8 diamond6 heart7 (1)
+discard diamond6 pile3 diamond5 (1)
+discard diamond7 club8 diamond6 (1)
+discard club8 diamond8 club7 (1)
+discard diamond8 pile2 diamond7 (1)
+Plan length: 39 step(s).
+Plan cost: 39
+Expanded 4839625 state(s).
+Reopened 0 state(s).
+Evaluated 7190591 state(s).
+Evaluations: 7190591
+Generated 28438311 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 4822637 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 7169541 state(s).
+Generated until last jump: 28344276 state(s).
+Number of registered states: 7190591
+Int hash set load factor: 7190591/16777216 = 0.428593
+Int hash set resizes: 24
+Search time: 19.8921s
+Total time: 19.9001s
+Solution found.
+Peak memory: 479084 KB
+Remove intermediate file output.sas
+search exit code: 0
+

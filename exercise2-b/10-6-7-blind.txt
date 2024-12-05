@@ -1,0 +1,130 @@
+Parsing...
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.010s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.010s CPU, 0.003s wall-clock]
+Generated 20 rules.
+Computing model... [0.030s CPU, 0.035s wall-clock]
+5723 relevant atoms
+1914 auxiliary atoms
+7637 final queue length
+16307 total queue pushes
+Completing instantiation... [0.100s CPU, 0.106s wall-clock]
+Instantiating: [0.140s CPU, 0.146s wall-clock]
+Computing fact groups...
+Finding invariants...
+7 initial candidates
+Finding invariants: [0.010s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.003s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+40 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.008s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.001s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.011s wall-clock]
+Translating task: [0.150s CPU, 0.139s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+54 propositions removed
+Detecting unreachable propositions: [0.040s CPU, 0.046s wall-clock]
+Reordering and filtering variables...
+82 of 82 variables necessary.
+36 of 82 mutex groups necessary.
+3973 of 3973 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.020s CPU, 0.019s wall-clock]
+Translator variables: 82
+Translator derived variables: 0
+Translator facts: 525
+Translator goal facts: 36
+Translator mutex groups: 36
+Translator total mutex groups size: 407
+Translator operators: 3973
+Translator axioms: 0
+Translator task size: 30936
+Translator peak memory: 52188 KB
+Writing output... [0.020s CPU, 0.023s wall-clock]
+Done! [0.400s CPU, 0.395s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/filipe/Desktop/IAA_lista3-main/exercise-c/fast-downward/builds/release/bin/downward --heuristic 'h=blind()' --search 'astar(h)' --internal-plan-file sas_plan < output.sas
+reading input... [t=0s]
+done reading input! [t=0.00998448s]
+Initializing blind search heuristic...
+Building successor generator...done! [t=0.0130166s]
+peak memory difference for successor generator creation: 1004 KB
+time for successor generation creation: 0.00203591s
+Variables: 82
+FactPairs: 525
+Bytes per state: 24
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for blind: 1
+[g=0, 1 evaluated, 0 expanded, t=0.0130166s, 12256 KB]
+f = 1 [1 evaluated, 0 expanded, t=0.0130166s, 12256 KB]
+Initial heuristic value for blind: 1
+pruning method: none
+f = 2 [6 evaluated, 1 expanded, t=0.0130166s, 12256 KB]
+f = 3 [17 evaluated, 6 expanded, t=0.0130166s, 12256 KB]
+f = 4 [28 evaluated, 17 expanded, t=0.0130166s, 12256 KB]
+f = 5 [33 evaluated, 28 expanded, t=0.0130166s, 12256 KB]
+f = 6 [38 evaluated, 33 expanded, t=0.0130166s, 12256 KB]
+f = 7 [45 evaluated, 38 expanded, t=0.0130166s, 12256 KB]
+f = 8 [53 evaluated, 45 expanded, t=0.0130166s, 12256 KB]
+f = 9 [74 evaluated, 53 expanded, t=0.0130166s, 12256 KB]
+f = 10 [122 evaluated, 74 expanded, t=0.0130166s, 12256 KB]
+f = 11 [215 evaluated, 122 expanded, t=0.0139375s, 12256 KB]
+f = 12 [416 evaluated, 215 expanded, t=0.0139375s, 12256 KB]
+f = 13 [835 evaluated, 416 expanded, t=0.0149372s, 12256 KB]
+f = 14 [1600 evaluated, 835 expanded, t=0.0159369s, 12256 KB]
+f = 15 [2817 evaluated, 1600 expanded, t=0.0189367s, 12256 KB]
+f = 16 [4542 evaluated, 2817 expanded, t=0.0219367s, 12256 KB]
+f = 17 [6767 evaluated, 4542 expanded, t=0.0269365s, 12256 KB]
+f = 18 [9455 evaluated, 6767 expanded, t=0.0339367s, 12388 KB]
+f = 19 [12573 evaluated, 9455 expanded, t=0.0409364s, 12520 KB]
+f = 20 [16170 evaluated, 12573 expanded, t=0.0509364s, 12920 KB]
+f = 21 [20527 evaluated, 16170 expanded, t=0.0609361s, 13056 KB]
+f = 22 [25993 evaluated, 20527 expanded, t=0.0739365s, 13328 KB]
+f = 23 [33052 evaluated, 25993 expanded, t=0.0909358s, 13980 KB]
+f = 24 [42516 evaluated, 33052 expanded, t=0.111935s, 14264 KB]
+f = 25 [55723 evaluated, 42516 expanded, t=0.140935s, 14808 KB]
+f = 26 [75193 evaluated, 55723 expanded, t=0.184935s, 16132 KB]
+f = 27 [104518 evaluated, 75193 expanded, t=0.260934s, 19408 KB]
+f = 28 [149281 evaluated, 104518 expanded, t=0.356926s, 20408 KB]
+f = 29 [219164 evaluated, 149281 expanded, t=0.510897s, 27588 KB]
+f = 30 [329952 evaluated, 219164 expanded, t=0.746893s, 30468 KB]
+f = 31 [506447 evaluated, 329952 expanded, t=1.14189s, 43856 KB]
+f = 32 [783238 evaluated, 506447 expanded, t=1.81985s, 54800 KB]
+f = 33 [1207594 evaluated, 783238 expanded, t=2.93281s, 81888 KB]
+f = 34 [1850932 evaluated, 1207594 expanded, t=4.62875s, 137232 KB]
+f = 35 [2818075 evaluated, 1850932 expanded, t=7.05861s, 170108 KB]
+f = 36 [4254393 evaluated, 2818075 expanded, t=10.9954s, 266752 KB]
+f = 37 [6362093 evaluated, 4254393 expanded, t=16.5732s, 360396 KB]
+f = 38 [9428904 evaluated, 6362093 expanded, t=25.1088s, 562056 KB]
+f = 39 [13890097 evaluated, 9428904 expanded, t=38.241s, 1001944 KB]
+f = 40 [20404818 evaluated, 13890097 expanded, t=58.8534s, 1180612 KB]
+Remove intermediate file output.sas
+search exit code: -9
+
+Driver aborting after search
+

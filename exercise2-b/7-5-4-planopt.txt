@@ -1,0 +1,119 @@
+Parsing...
+Parsing: [0.000s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 20 rules.
+Computing model... [0.020s CPU, 0.019s wall-clock]
+3114 relevant atoms
+1188 auxiliary atoms
+4302 final queue length
+8902 total queue pushes
+Completing instantiation... [0.050s CPU, 0.057s wall-clock]
+Instantiating: [0.070s CPU, 0.080s wall-clock]
+Computing fact groups...
+Finding invariants...
+7 initial candidates
+Finding invariants: [0.010s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+28 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.005s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Translator axioms removed by simplifying: 0
+Computing negative axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.004s wall-clock]
+Translating task: [0.060s CPU, 0.063s wall-clock]
+0 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+35 propositions removed
+Detecting unreachable propositions: [0.030s CPU, 0.024s wall-clock]
+Reordering and filtering variables...
+58 of 58 variables necessary.
+30 of 57 mutex groups necessary.
+2088 of 2088 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.010s CPU, 0.011s wall-clock]
+Translator variables: 58
+Translator derived variables: 0
+Translator facts: 330
+Translator goal facts: 24
+Translator mutex groups: 30
+Translator total mutex groups size: 274
+Translator operators: 2088
+Translator axioms: 0
+Translator task size: 16559
+Translator peak memory: 41372 KB
+Writing output... [0.010s CPU, 0.012s wall-clock]
+Done! [0.190s CPU, 0.202s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: output.sas
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/filipe/Desktop/IAA_lista3-main/exercise-c/fast-downward/builds/release/bin/downward --heuristic 'h=planopt_relaxed_task_graph()' --search 'astar(h)' --internal-plan-file sas_plan < output.sas
+reading input... [t=0s]
+done reading input! [t=0.00599775s]
+Building successor generator...done! [t=0.00899822s]
+peak memory difference for successor generator creation: 468 KB
+time for successor generation creation: 0.00100025s
+Variables: 58
+FactPairs: 330
+Bytes per state: 16
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for planopt_relaxed_task_graph: 1
+[g=0, 1 evaluated, 0 expanded, t=0.00899822s, 12776 KB]
+f = 1 [1 evaluated, 0 expanded, t=0.00899822s, 12776 KB]
+Initial heuristic value for planopt_relaxed_task_graph: 1
+pruning method: none
+f = 2 [5 evaluated, 1 expanded, t=0.0099985s, 12776 KB]
+f = 3 [14 evaluated, 5 expanded, t=0.0099985s, 12776 KB]
+f = 4 [28 evaluated, 12 expanded, t=0.011998s, 12776 KB]
+f = 5 [44 evaluated, 24 expanded, t=0.013998s, 12776 KB]
+f = 6 [65 evaluated, 36 expanded, t=0.0169979s, 12776 KB]
+f = 7 [73 evaluated, 54 expanded, t=0.0169979s, 12776 KB]
+f = 8 [83 evaluated, 60 expanded, t=0.017998s, 12776 KB]
+f = 9 [97 evaluated, 70 expanded, t=0.0199985s, 12776 KB]
+f = 10 [121 evaluated, 82 expanded, t=0.0229982s, 12776 KB]
+f = 11 [169 evaluated, 106 expanded, t=0.0279982s, 12776 KB]
+f = 12 [227 evaluated, 154 expanded, t=0.0349979s, 12776 KB]
+f = 13 [290 evaluated, 212 expanded, t=0.0409979s, 12776 KB]
+f = 14 [374 evaluated, 273 expanded, t=0.0499977s, 12776 KB]
+f = 15 [498 evaluated, 352 expanded, t=0.0609115s, 12776 KB]
+f = 16 [704 evaluated, 473 expanded, t=0.0809113s, 12776 KB]
+f = 17 [1084 evaluated, 678 expanded, t=0.114823s, 12776 KB]
+f = 18 [1852 evaluated, 1049 expanded, t=0.181728s, 12776 KB]
+f = 19 [3348 evaluated, 1799 expanded, t=0.303578s, 12776 KB]
+f = 20 [6035 evaluated, 3280 expanded, t=0.52445s, 12776 KB]
+f = 21 [10608 evaluated, 5937 expanded, t=0.894154s, 13064 KB]
+f = 22 [18175 evaluated, 10444 expanded, t=1.50681s, 13484 KB]
+f = 23 [30400 evaluated, 17862 expanded, t=2.47422s, 14272 KB]
+f = 24 [49659 evaluated, 29803 expanded, t=3.96432s, 14816 KB]
+f = 25 [79135 evaluated, 48654 expanded, t=6.23268s, 16416 KB]
+f = 26 [123330 evaluated, 77568 expanded, t=9.58105s, 19680 KB]
+f = 27 [189091 evaluated, 120930 expanded, t=14.3581s, 21448 KB]
+f = 28 [287368 evaluated, 185586 expanded, t=21.3246s, 27088 KB]
+f = 29 [435334 evaluated, 282579 expanded, t=31.5126s, 32436 KB]
+f = 30 [660819 evaluated, 429176 expanded, t=46.3388s, 44828 KB]
+Remove intermediate file output.sas
+search exit code: -9
+
+Driver aborting after search
+

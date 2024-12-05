@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <deque>
 
 using namespace std;
 
@@ -88,7 +89,7 @@ int RelaxedTaskGraph::additive_cost_of_goal() {
 int RelaxedTaskGraph::ff_cost_of_goal() {
      // TODO: add your code for exercise 2 (e) here.
     ///*
-    graph.weighted_most_conservative_valuation();
+    /*graph.weighted_most_conservative_valuation();
     int sum = 0;
     std::vector<NodeID> open;
     open.push_back(goal_node_id);
@@ -113,7 +114,48 @@ int RelaxedTaskGraph::ff_cost_of_goal() {
             }
         }
     }
-    //*/
+    //
+    return sum;*/
+
+    std::deque<NodeID> nodes;             
+    std::unordered_set<NodeID> visited;  
+    int sum = 0;                         
+
+    nodes.push_back(goal_node_id);
+
+    while (!nodes.empty()) {
+
+        NodeID current_node_id = nodes.front();
+        nodes.pop_front();
+
+        if (visited.find(current_node_id) != visited.end()) {
+            continue;
+        }
+        visited.insert(current_node_id);
+
+        AndOrGraphNode current_node = graph.get_node(current_node_id);
+
+        if (current_node.type == NodeType::AND) {
+
+            for (NodeID successor_id : current_node.successor_ids) {
+                if (visited.find(successor_id) == visited.end()) {
+                    AndOrGraphNode successor = graph.get_node(successor_id);
+                    sum += successor.direct_cost;  
+                    nodes.push_back(successor_id); 
+                }
+            }
+        } else if (current_node.type == NodeType::OR) {
+            
+            NodeID achiever_id = current_node.achiever;
+            if (visited.find(achiever_id) == visited.end()) {
+                AndOrGraphNode achiever = graph.get_node(achiever_id);
+                sum += achiever.direct_cost;  
+                nodes.push_back(achiever_id); 
+            }
+        }
+    }
+
+    // Return the accumulated cost
     return sum;
 }
 

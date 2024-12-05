@@ -192,7 +192,10 @@ namespace planopt_heuristics
                     if (current_cost < predecessor.additive_cost)
                     {
                         predecessor.additive_cost = current_cost;
+
+
                         predecessor.achiever = node_id; 
+                        
                         queue.emplace(predecessor.additive_cost, predecessor_id);
                     }
                 }

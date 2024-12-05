@@ -86,8 +86,35 @@ int RelaxedTaskGraph::additive_cost_of_goal() {
 }
 
 int RelaxedTaskGraph::ff_cost_of_goal() {
-    // TODO: add your code for exercise 2 (e) here.
-    return -1;
+     // TODO: add your code for exercise 2 (e) here.
+    ///*
+    graph.weighted_most_conservative_valuation();
+    int sum = 0;
+    std::vector<NodeID> open;
+    open.push_back(goal_node_id);
+    while(!open.empty()){
+        NodeID current_id = open.back();
+        open.pop_back();
+        for(NodeID id : graph.get_node(current_id).successor_ids){
+            if(graph.get_node(id).type == NodeType::OR){
+                if(id == graph.get_node(current_id).achiever){
+                    if(current_id == goal_node_id){
+                    sum += 1;
+                    }
+                    open.push_back(id);
+
+
+                }
+            }
+            else{
+                open.push_back(id);
+                //sum += graph.get_node(id).direct_cost;
+
+            }
+        }
+    }
+    //*/
+    return sum;
 }
 
 }

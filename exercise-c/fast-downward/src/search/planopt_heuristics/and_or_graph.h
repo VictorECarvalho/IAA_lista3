@@ -42,6 +42,7 @@ public:
     const AndOrGraphNode &get_node(NodeID id) const;
     void most_conservative_valuation();
     void weighted_most_conservative_valuation();
+    void ff(NodeID goal_node_id);
 };
 
 extern void test_and_or_graphs();

@@ -198,6 +198,45 @@ namespace planopt_heuristics
                 }
             }
         }
+        for (AndOrGraphNode &node : nodes)
+        {
+            if(node.type == NodeType::OR || node.predecessor_ids.empty()){
+                int min = std::numeric_limits<int>::max();
+                for(NodeID id : node.successor_ids){
+                    if(nodes[id].additive_cost < min){
+                        node.achiever = id;
+                    }
+                }
+            }
+        }
+    }
+    void AndOrGraph::ff(NodeID goal_node_id){
+        int sum = 0;
+        AndOrGraphNode &goal_node = nodes[goal_node_id];
+        vector<NodeID> open;
+        open.push_back(goal_node_id);
+        ///*
+        while(!open.empty()){
+            NodeID current_id = open.back();
+            open.pop_back();
+            AndOrGraphNode &current_node = nodes[current_id];
+            for(NodeID id : current_node.predecessor_ids){
+                AndOrGraphNode &predecessor_node = nodes[id];
+                if(predecessor_node.type == NodeType::OR){
+                    if(goal_node.achiever == id){
+                        open.push_back(id);
+                        sum += predecessor_node.direct_cost;
+                    }
+                }
+                else{
+                    open.push_back(id);
+                    sum += predecessor_node.direct_cost;
+                }
+            }
+        }
+        //*/
+        goal_node.additive_cost = sum;
+        return;
     }
 
     void add_nodes(vector<string> names, NodeType type, AndOrGraph &g, unordered_map<string, NodeID> &ids)

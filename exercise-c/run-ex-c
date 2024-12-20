@@ -1,0 +1,47 @@
+#!/bin/bash
+
+instances=(
+    "castle-2-2-8-cards.pddl"
+    "castle-3-3-8-cards.pddl"
+    "castle-4-3-5-cards.pddl"
+    "castle-5-4-7-cards.pddl"
+    "castle-5-4-9-cards.pddl"
+    "castle-5-4-10-cards.pddl"
+    "castle-6-4-7-cards.pddl"
+    "castle-7-5-4-cards.pddl"
+    "castle-8-5-9-cards.pddl"
+    "castle-9-6-5-cards.pddl"
+    "castle-10-6-7-cards.pddl"
+    "castle-12-7-3-cards.pddl"
+    "castle-16-9-1-cards.pddl"
+)
+
+for instance in "${instances[@]}"; do
+    if [ -f "castle/$instance" ]; then
+        echo "Processing instance $instance"
+
+        # Run the Fast Downward planner and capture the output
+        OUTPUT=$(
+            ./fast-downward/fast-downward.py castle/domain.pddl "castle/$instance" \
+            --heuristic "h=planopt_add()" \
+            --search "astar(lmcut())" 
+            --translate-options --relaxed
+        )
+
+        # Extract the initial heuristic value (h(s0))
+        INITIAL_HEURISTIC=$(echo "$OUTPUT" | grep -Eo "h\(s0\)=[0-9]+(\.[0-9]+)?")
+
+        # Extract the plan size
+        PLAN_SIZE=$(echo "$OUTPUT" | grep -E "Plan length: [0-9]+" | awk '{print $3}')
+
+        # Print the plan size if found
+        if [ -n "$PLAN_SIZE" ]; then
+            echo "Plan size for instance $instance: $PLAN_SIZE"
+        else
+            echo "No plan found for instance $instance."
+        fi
+        echo
+    else
+        echo "File castle/$instance does not exist."
+    fi
+done
